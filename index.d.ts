@@ -8,3 +8,10 @@ declare class OAuth {
 }
 
 export { OAuth };
+
+declare class OAuth2 {
+    constructor(clientId: string, clientSecret: string, baseSite: string, authorizePath: string, accessTokenPath: string, customHeaders: any);
+    getOAuthAccessToken(code: string, params: any, callback: (error: any, access_token: string, refresh_token: string, results: any) => void): void;
+}
+
+export { OAuth2 };
